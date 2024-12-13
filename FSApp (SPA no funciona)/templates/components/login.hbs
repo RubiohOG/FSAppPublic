@@ -1,0 +1,61 @@
+<!-- login.hbs -->
+<div id="login" class="container">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="logoutToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <b class="me-auto">{{i18n "Cierre de sesión"}}</b>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        {{i18n "¡Has cerrado sesión correctamente!"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="registerToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <b class="me-auto">{{i18n "Registro"}}</b>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        {{i18n "Te has registrado correctamente! Ahora puedes iniciar sesión."}}
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo.svg" alt="Fair Share" width="40" height="40"> FairShare
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#register" id="registerlink">{{i18n "Registrarse"}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">{{i18n "Iniciar Sesión"}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h2>{{i18n "Iniciar Sesión"}}</h2>
+  <form>
+    <div class="form-group">
+      <label for="login-username">{{i18n "Usuario"}}</label>
+      <input type="text" id="login-username" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="login-password">{{i18n "Contraseña"}}</label>
+      <input type="password" id="login-password" class="form-control" required>
+    </div>
+    <button type="button" id="loginbutton" class="btn btn-primary">{{i18n "Entrar"}}</button>
+  </form>
+  <p><a href="#register" id="registerlink">{{i18n "Registrarse"}}</a></p>
+</div>

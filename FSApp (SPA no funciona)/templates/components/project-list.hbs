@@ -1,0 +1,14 @@
+<!-- project-list.hbs -->
+<div id="project-list" class="container">
+  <h2>{{i18n "Proyectos Abiertos"}}</h2>
+  <button type="button" id="create-project" class="btn btn-primary">{{i18n "Crear Nuevo Proyecto"}}</button>
+  <ul>
+    {{#each projects}}
+    <li>
+      <a href="#project/{{this.id}}">{{this.name}}</a>
+    </li>
+    {{else}}
+    <li>{{i18n "No hay proyectos disponibles."}}</li>
+    {{/each}}
+  </ul>
+</div>
