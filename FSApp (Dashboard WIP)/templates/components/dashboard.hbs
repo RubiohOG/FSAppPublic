@@ -1,0 +1,42 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="logo.svg" alt="Fair Share" width="40" height="40"> FairShare
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="logoutbutton" href="">{{i18n "Cerrar Sesión" }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <main class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="mt-4">{{i18n "Proyectos Abiertos" }}</h2>
+            <button id="create-project" class="btn btn-secondary" >{{i18n "Crear Proyecto" }}</button>
+        </div>
+
+        <ul id="project-list" class="list-group mt-3">
+            {{#if projects}}
+              <ul class="list-group">
+                {{#each projects}}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="#project-detail/{{this.project_id}}"><span>{{this.project_name}}</span></a>
+                  </li>
+                {{/each}}
+              </ul>
+            {{else}}
+              <div class="alert alert-info" role="alert">
+                {{i18n "No hay proyectos disponibles."}}
+              </div>
+            {{/if}}
+        </ul>
+    </main>
+</div>
