@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <rect x="0" y="0" width="200" height="200" fill="transparent"/>
+  <circle cx="100" cy="100" r="80" fill="#4a90e2"/>
+  <path d="M100 40 L160 100 L100 160 L40 100 Z" fill="#ffffff"/>
+  <circle cx="100" cy="100" r="30" fill="#4a90e2"/>
+  <text x="100" y="108" font-family="Montserrat, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">FS</text>
+  <circle cx="70" cy="70" r="15" fill="#ffffff"/>
+  <circle cx="130" cy="70" r="15" fill="#ffffff"/>
+  <circle cx="70" cy="130" r="15" fill="#ffffff"/>
+  <circle cx="130" cy="130" r="15" fill="#ffffff"/>
+</svg>
