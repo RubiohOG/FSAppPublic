@@ -1,0 +1,31 @@
+<div>
+    <h3>{{i18n "Pagos Realizados"}}</h3>
+    <button type="button" class="btn btn-primary" id="addPaymentBtn">{{i18n "Crear Pago"}}</button>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+        <th>{{i18n "Usuario que paga"}}</th>
+        <th>{{i18n "Nombre del Pago"}}</th>
+        <th>{{i18n "Cantidad"}}</th>
+        <th>{{i18n "Acciones"}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each payments}}
+        <tr>
+        <td>{{this.payer}}</td>
+        <td>{{this.payment_name}}</td>
+        <td>{{this.amount}}</td>
+        <td>
+            <button class="btn btn-secondary">{{i18n "Editar"}}</button>
+            <button class="btn btn-danger">{{i18n "Eliminar"}}</button>
+        </td>
+        </tr>
+        {{else}}
+        <tr>
+        <td colspan="4">{{i18n "No hay pagos registrados"}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+</div>

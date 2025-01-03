@@ -1,0 +1,12 @@
+<div>
+    <h3>{{i18n "Otros Proyectos"}}</h3>
+    <ul class="list-group">
+    {{#each otherProjects}}
+    <li class="list-group-item">
+        <a href="#project/{{this.id}}">{{this.name}}</a>
+    </li>
+    {{else}}
+    <li>{{i18n "No hay otros proyectos asociados."}}</li>
+    {{/each}}
+    </ul>
+</div>

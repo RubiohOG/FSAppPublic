@@ -1,0 +1,25 @@
+<div>
+    <h3>{{i18n "Deudas Pendientes"}}</h3>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>{{i18n "Deudor"}}</th>
+        <th>{{i18n "Acreedor"}}</th>
+        <th>{{i18n "Cantidad"}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each debts}}
+        <tr>
+        <td>{{this.debtor}}</td>
+        <td>{{this.creditor}}</td>
+        <td>{{this.amount}}</td>
+        </tr>
+        {{else}}
+        <tr>
+        <td colspan="3">{{i18n "No hay deudas registradas"}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+</div>
